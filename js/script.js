@@ -1,4 +1,24 @@
 $(document).ready(function(){
+    
+    // modal 기능
+    let modal = $('.modal');
+    let modalCon = $('.modal-content');
+    let modalClose = $('.modal-close');
+
+    modal.click(function(){
+        modal.stop().fadeOut();
+        $('html').css('overflow', 'auto');
+    });
+
+    modalCon.click(function(e){
+        e.stopPropagation();
+    });
+
+    modalClose.click(function(){
+        modal.stop().fadeOut();
+        $('html').css('overflow', 'auto');
+    });
+
     // 공지사항 데이터
     var noticeData = [{
             link: "#",
